@@ -1,0 +1,19 @@
+# Build output and dependencies (recreated by the build)
+frontend/node_modules/
+frontend/dist/
+backend/target/
+
+# Uploaded files (the live photo is bundled in backend/src/main/resources/photo/)
+backend/uploads/
+
+# Local environment files (may contain secrets)
+.env
+.env.*
+frontend/.env.local
+
+# IDE / OS files
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db

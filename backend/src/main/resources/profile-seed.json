@@ -1,0 +1,163 @@
+{
+  "id": "main",
+  "name": "Navya G M",
+  "title": "Associate Software Developer · Java Backend",
+  "tagline": "I build backend features for a test automation platform: third-party integrations, custom dashboards and natural-language test steps.",
+  "summary": "Java backend developer working with Spring Boot and MongoDB at Fireflink, a product company that builds a test automation platform. I trained in full stack Java at JSpiders, got hired on my Java backend skills, and since February 2026 I've been shipping features and fixing customer tickets on a live product used by testing teams.",
+  "contact": {
+    "email": "navyamanjappa@gmail.com",
+    "phone": "+91 8310722711",
+    "location": "Bangalore, Karnataka",
+    "linkedin": "https://www.linkedin.com/in/navya-g-m-830369225",
+    "github": "https://github.com/Navya282",
+    "instagram": "https://www.instagram.com/___na_v__ya___",
+    "youtube": "https://youtube.com/@navyamanjappa5122",
+    "facebook": "https://www.facebook.com/navya.navvu.794"
+  },
+  "journey": [
+    {
+      "period": "2021 – 2025",
+      "title": "B.E. in Computer Science",
+      "place": "Government Engineering College, Kushalnagara",
+      "description": "Graduated with 8.36 CGPA. Built an AI-based stock price tracker with LSTM and GRU models as my academic project."
+    },
+    {
+      "period": "2025",
+      "title": "Full Stack Java Training",
+      "place": "JSpiders",
+      "description": "Learned Core Java, JDBC, Hibernate, Spring Framework, Spring Boot, HTML, CSS and Oracle SQL. Selected as an Incubation Student for technical and communication skills, and built a Flight Booking backend with Spring Boot."
+    },
+    {
+      "period": "Feb 2026 – Present",
+      "title": "Associate Software Developer",
+      "place": "Fireflink",
+      "description": "Hired for Java backend. Working on Java, Spring Boot and MongoDB every day, and picking up Elasticsearch and Kafka along the way."
+    }
+  ],
+  "skillGroups": [
+    {
+      "name": "Languages & Core",
+      "skills": [
+        { "name": "Core Java", "level": "confident", "learnedAt": "JSpiders" },
+        { "name": "JDBC", "level": "working", "learnedAt": "JSpiders" },
+        { "name": "SQL", "level": "working", "learnedAt": "JSpiders" },
+        { "name": "HTML", "level": "working", "learnedAt": "JSpiders" },
+        { "name": "CSS", "level": "working", "learnedAt": "JSpiders" }
+      ]
+    },
+    {
+      "name": "Frameworks",
+      "skills": [
+        { "name": "Spring Boot", "level": "confident", "learnedAt": "JSpiders" },
+        { "name": "Spring Framework", "level": "working", "learnedAt": "JSpiders" },
+        { "name": "Hibernate / JPA", "level": "working", "learnedAt": "JSpiders" },
+        { "name": "REST APIs", "level": "confident", "learnedAt": "Fireflink" }
+      ]
+    },
+    {
+      "name": "Databases & Messaging",
+      "skills": [
+        { "name": "MongoDB", "level": "confident", "learnedAt": "Fireflink" },
+        { "name": "Oracle SQL", "level": "working", "learnedAt": "JSpiders" },
+        { "name": "PostgreSQL", "level": "working", "learnedAt": "JSpiders" },
+        { "name": "Elasticsearch", "level": "learning", "learnedAt": "Fireflink" },
+        { "name": "Kafka", "level": "learning", "learnedAt": "Fireflink" }
+      ]
+    },
+    {
+      "name": "Tools",
+      "skills": [
+        { "name": "IntelliJ IDEA", "level": "confident", "learnedAt": "Fireflink" },
+        { "name": "VS Code", "level": "confident", "learnedAt": "College, JSpiders, Fireflink" },
+        { "name": "Postman", "level": "confident", "learnedAt": "JSpiders, Fireflink" },
+        { "name": "Git", "level": "working", "learnedAt": "Fireflink" },
+        { "name": "Jira", "level": "working", "learnedAt": "Fireflink" },
+        { "name": "Bitbucket", "level": "working", "learnedAt": "Fireflink" }
+      ]
+    }
+  ],
+  "experience": {
+    "company": "Fireflink",
+    "role": "Associate Software Developer",
+    "startDate": "2026-02-09",
+    "companyType": "Product company · Test automation platform",
+    "summary": "Fireflink builds a test automation tool. I work on the Java backend: resolving customer tickets and implementing new features, mostly around integrations with the tools our users already rely on.",
+    "stack": ["Java", "Spring Boot", "MongoDB"],
+    "contributions": [
+      {
+        "title": "Custom Dashboard",
+        "category": "Analytics",
+        "description": "Built the backend that turns any mix of product data into bar, pie and stacked bar charts.",
+        "highlight": "3 chart types, any data combination",
+        "tools": ["Java", "Spring Boot", "MongoDB", "Elasticsearch"],
+        "visual": "charts"
+      },
+      {
+        "title": "Azure DevOps Defect Integration",
+        "category": "Defect Management",
+        "description": "Bugs raised on our platform are created directly in Azure DevOps. Built the complete backend.",
+        "highlight": "Delivered end to end in 3 days",
+        "tools": ["Azure DevOps", "REST APIs", "Spring Boot"],
+        "visual": "defect-flow"
+      },
+      {
+        "title": "Cloud Platform App Deletion",
+        "category": "Cloud Platforms",
+        "description": "Deleting an uploaded Android or iOS app on our platform also removes it from the cloud device platform.",
+        "highlight": "Works across all 4 cloud platforms",
+        "tools": ["Fireflink Device Farm", "BrowserStack", "Sauce Labs", "LambdaTest"],
+        "visual": "cloud-delete"
+      },
+      {
+        "title": "CI/CD & Collaboration Integrations",
+        "category": "CI/CD · Collaboration",
+        "description": "Bitbucket, Azure, Slack and Teams integrations that send a result summary of every automation run to the tool.",
+        "highlight": "4 integrations + execution result table",
+        "tools": ["Bitbucket", "Azure", "Slack", "Microsoft Teams"],
+        "visual": "result-table"
+      },
+      {
+        "title": "Natural Language Steps (NLPs)",
+        "category": "Test Scripting",
+        "description": "Implemented many backend steps written in plain English, so anyone can read a test script without code.",
+        "highlight": "Readable steps for non-developers",
+        "tools": ["Java", "JDBC", "Selenium"],
+        "visual": "nlp"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "name": "Flight Booking Management",
+      "description": "Spring Boot backend for flight search, ticket booking, users and payments.",
+      "points": [
+        "RESTful APIs following a clean controller–service–repository architecture.",
+        "CRUD with JPA/Hibernate and PostgreSQL, with exception handling, validation and indexed queries.",
+        "All APIs tested with Postman."
+      ],
+      "tech": ["Spring Boot", "Hibernate", "PostgreSQL", "Postman"],
+      "link": "https://github.com/Navya282"
+    },
+    {
+      "name": "AI-Based Real-Time Stock Price Tracker",
+      "description": "Real-time stock tracking with price forecasting.",
+      "points": [
+        "Forecasts prices with LSTM and GRU deep learning models.",
+        "Pulls live market data from the Yahoo Finance API.",
+        "Built as my final-year B.E. academic project."
+      ],
+      "tech": ["Python", "TensorFlow", "Yahoo Finance API"],
+      "link": "https://github.com/Navya282"
+    }
+  ],
+  "education": [
+    { "institution": "Government Engineering College, Kushalnagara", "degree": "B.E., Computer Science & Engineering", "score": "8.36 CGPA (83.6%)", "year": "2025" },
+    { "institution": "Pace Ultra-Modern PU College, Shivamogga", "degree": "Pre-University (PU)", "score": "81%", "year": "2021" },
+    { "institution": "Sri Sri Ravishankar Vidya Mandira, Shivamogga", "degree": "10th Standard", "score": "82%", "year": "2019" }
+  ],
+  "achievements": [
+    "Selected as an Incubation Student at JSpiders based on technical and communication skills.",
+    "Maintained an academic record above 80% throughout studies.",
+    "Hosted college events and took part in extracurricular activities."
+  ]
+}
