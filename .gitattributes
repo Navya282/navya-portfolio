@@ -1,0 +1,3 @@
+# GitHub shows a repo's main language from the code it contains.
+# Leave the React frontend out of that count so the repo is labelled by its Java (Spring Boot) backend.
+frontend/** linguist-detectable=false
