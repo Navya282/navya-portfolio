@@ -3,6 +3,7 @@ package com.navya.portfolio.controller;
 import com.navya.portfolio.model.ContactMessage;
 import com.navya.portfolio.repository.ContactMessageRepository;
 import com.navya.portfolio.service.AdminKeyGuard;
+import com.navya.portfolio.service.ContactNotifier;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,18 +24,23 @@ public class ContactController {
 
     private final ContactMessageRepository contactMessageRepository;
     private final AdminKeyGuard adminKeyGuard;
+    private final ContactNotifier contactNotifier;
 
-    public ContactController(ContactMessageRepository contactMessageRepository, AdminKeyGuard adminKeyGuard) {
+    public ContactController(ContactMessageRepository contactMessageRepository, AdminKeyGuard adminKeyGuard,
+                             ContactNotifier contactNotifier) {
         this.contactMessageRepository = contactMessageRepository;
         this.adminKeyGuard = adminKeyGuard;
+        this.contactNotifier = contactNotifier;
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Map<String, String> sendMessage(@Valid @RequestBody ContactMessage request) {
-        contactMessageRepository.save(new ContactMessage(
+        ContactMessage saved = contactMessageRepository.save(new ContactMessage(
                 null, request.name().trim(), request.email().trim(), request.subject().trim(),
                 request.message().trim(), Instant.now()));
+        // Optional email alert to the site owner (does nothing unless RESEND_API_KEY and NOTIFY_EMAIL are set)
+        contactNotifier.notifyNewMessage(saved);
         return Map.of("message", "Thanks! Your message has been received.");
     }
 

@@ -1,18 +1,13 @@
 import ContributionVisual from './ContributionVisual.jsx';
 import ToolChip from './ToolChip.jsx';
-
-function monthsSince(isoDate) {
-  const start = new Date(isoDate);
-  const now = new Date();
-  return (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth());
-}
+import { tenure } from '../tenure.js';
 
 function formatStart(isoDate) {
   return new Date(isoDate).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
 }
 
 export default function Experience({ experience }) {
-  const months = monthsSince(experience.startDate);
+  const { months, label } = tenure(experience.startDate);
 
   return (
     <section className="section" id="work">
@@ -26,7 +21,7 @@ export default function Experience({ experience }) {
         </div>
         <div className="exp-meta">
           <span className="exp-badge">Since {formatStart(experience.startDate)}</span>
-          {months > 0 && <span className="muted small">{months} month{months === 1 ? '' : 's'} and counting</span>}
+          {months > 0 && <span className="muted small">{label} month{label === '1' ? '' : 's'} and counting</span>}
           <div className="chips">
             {experience.stack.map((s) => <ToolChip key={s} name={s} className="chip chip-accent" />)}
           </div>

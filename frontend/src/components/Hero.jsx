@@ -4,12 +4,8 @@ import { TbArrowRight, TbBrandLinkedin } from 'react-icons/tb';
 import ProfilePhoto from './ProfilePhoto.jsx';
 import ToolChip from './ToolChip.jsx';
 import { useCountUp, useTypewriter } from '../effects.js';
+import { tenure } from '../tenure.js';
 
-function monthsSince(isoDate) {
-  const start = new Date(isoDate);
-  const now = new Date();
-  return (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth());
-}
 
 function Stat({ target, decimals = 0, suffix = '', label }) {
   const value = useCountUp(target);
@@ -31,7 +27,10 @@ export default function Hero({ profile }) {
   // All numbers come from profile-seed.json, so they stay correct when the data changes.
   const cgpa = parseFloat(education[0]?.score);
   const stats = [
-    { target: monthsSince(experience.startDate), suffix: '+', label: `months at ${experience.company}` },
+    (() => {
+      const t = tenure(experience.startDate);
+      return { target: t.months, suffix: t.exact ? '' : '+', label: `months at ${experience.company}` };
+    })(),
     { target: experience.contributions.length, label: 'features shipped' },
     ...(Number.isFinite(cgpa) ? [{ target: cgpa, decimals: 2, label: 'CGPA in B.E.' }] : []),
   ];
